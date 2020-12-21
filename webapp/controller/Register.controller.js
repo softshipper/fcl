@@ -11,6 +11,8 @@ sap.ui.define([
 		 * @memberOf io.example.fcl.view.Register
 		 */
 		onInit: function () {
+			
+			console.log("Hello")
 
 		},
 

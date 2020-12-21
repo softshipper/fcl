@@ -76,6 +76,11 @@
 				"async": true
 			},
 			"routes": [{
+				"pattern": "register",
+				"name": "register",
+				"target": "register",
+				"layout": "EndColumnFullScreen"
+			}, {
 				"pattern": ":layout:",
 				"name": "master",
 				"target": [
@@ -89,11 +94,6 @@
 					"master",
 					"detail"
 				]
-			}, {
-				"pattern": "register",
-				"name": "register",
-				"target": "register",
-				"layout": "EndColumnFullScreen"
 			}],
 			"targets": {
 				"master": {
