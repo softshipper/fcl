@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/f/library"
+], function (Controller, fioriLibrary) {
 	"use strict";
 
 	return Controller.extend("io.example.fcl.controller.Register", {
@@ -11,10 +12,16 @@ sap.ui.define([
 		 * @memberOf io.example.fcl.view.Register
 		 */
 		onInit: function () {
-			
-			console.log("Hello")
+			 const oOwnerComponent = this.getOwnerComponent(); 
+			this.oRouter = oOwnerComponent.getRouter();
 
 		},
+		
+		onPress: function (evt) {
+			this.oRouter.navTo("overview", {
+				layout: fioriLibrary.LayoutType.TwoColumnsMidExpanded
+			});
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

@@ -18,7 +18,7 @@ sap.ui.define([
 		},
 
 		onPress: function (evt) {
-			this.oRouter.navTo("register", {
+			this.oRouter.navTo(":layout:", {
 				layout: fioriLibrary.LayoutType.EndColumnFullScreen
 			});
 		}

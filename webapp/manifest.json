@@ -76,24 +76,24 @@
 				"async": true
 			},
 			"routes": [{
-				"pattern": "register",
-				"name": "register",
-				"target": "register",
-				"layout": "EndColumnFullScreen"
-			}, {
-				"pattern": ":layout:",
+				"pattern": "overview",
 				"name": "master",
 				"target": [
 					"master",
 					"detail"
 				]
 			}, {
-				"pattern": ":layout:",
+				"pattern": "overview",
 				"name": "detail",
 				"target": [
 					"master",
 					"detail"
 				]
+			}, {
+				"pattern": ":layout:",
+				"name": "register",
+				"target": "register",
+				"layout": "EndColumnFullScreen"
 			}],
 			"targets": {
 				"master": {
